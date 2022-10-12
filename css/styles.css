@@ -327,6 +327,7 @@ footer {
   .bio {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 120px 0;
     text-align: left;
   }
@@ -392,6 +393,95 @@ footer {
   .contact p {
     font-size: 18px;
     line-height: 28px;
+  }
+
+}
+
+@media (min-width: 90em) {
+
+  .wrapper {
+    padding-bottom: 64px;
+  }
+
+  header,
+  main >:not(.slider),
+  footer {
+    padding: unset;
+    max-width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main > .hero-text {
+    max-width: 772px;
+    margin: 0 auto 80px;
+  }
+
+  .hero-text h1 {
+    font-size: 56px;
+    line-height: 71px;
+    margin-top: 66px;
+    margin-bottom: 23px;
+  }
+
+  .hero-text p {
+    padding: 0 20px;
+  }
+
+  .hero-skills {
+    grid-template-areas: 
+      "design design ux apps photography photography"
+      "design design illustrations illustrations motion motion"
+    ;
+  }
+
+  .motion {
+    height: 158px;
+  }
+
+  .bio {
+    margin: 136px 0 88px 0;
+  }
+
+  .bio img {
+    max-width: 445px;
+    transform: translateX(0);
+  }
+
+  .bio-text {
+    flex-basis: 540px;
+  }
+
+  .bio-text h2 {
+    margin-bottom: 34px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .bio-text p {
+    margin-bottom: 32px;
+  }
+
+  .slider {
+    margin-bottom: 88px;
+  }
+
+  main > .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 320px;
+    padding-left: 65px;
+    padding-right: 95px;
+  }
+
+  .contact-text {
+    flex-basis: 540px;
+    text-align: left;
+  }
+
+  .contact a {
+    margin: 0;
   }
 
 }
