@@ -49,7 +49,8 @@ body {
 }
 
 .wrapper {
-  padding: 16px 0;
+  padding-top: 16px;
+  padding-bottom: 32px;
 }
 
 main >:not(.slider) {
@@ -206,17 +207,24 @@ a {
   margin-bottom: 100px;
 }
 
+.slider h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-black);
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(5, max-content);
   grid-template-rows: 1fr;
-  justify-content: center;
   gap: 15px;
   margin: 32px auto;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 .gallery img {
+  display: block;
   height: 180px;
   background: #D8D8D8;
   border-radius: 10px;
@@ -265,4 +273,125 @@ main .contact {
 
 footer {
   padding-bottom: 16px;
+}
+
+@media (min-width: 48em) {
+
+  .wrapper {
+    padding-top: 34px;
+    padding-bottom: 56px;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+  }
+  
+  a {
+    height: 56px;
+    width: 228px;
+    font-size: 16px;
+  }
+
+  header,
+  main >:not(.slider),
+  footer {
+    padding: 0 39.5px;
+  }
+
+  .hero-text {
+    margin-bottom: 64px;
+  }
+
+  .hero-text h1 {
+    font-size: 44px;
+    line-height: 55px;
+    margin-top: 54px;
+    margin-bottom: 27px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 0 58.5px;
+  }
+
+  .hero-skills {
+    grid-template-areas: 
+      "design design ux apps"
+      "design design illustrations illustrations"
+      "photography photography motion motion"
+    ;
+  }
+
+  .bio {
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0;
+    text-align: left;
+  }
+
+  .bio img {
+    max-width: 364px;
+    transform: translateX(-23%);
+  }
+
+  .bio-text h2 {
+    margin-top: 0;
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .bio-text h2,
+  .bio-text p {
+    margin-bottom: 24px;
+  }
+
+  .bio-text p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .bio-text a {
+    margin: 0;
+  }
+
+  .slider {
+    margin-bottom: 120px;
+  }
+
+  .slider h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .gallery {
+    margin: 56px auto;
+    gap: 30px;
+  }
+
+  .gallery img {
+    height: 360px;
+  }
+
+  main .contact {
+    margin: 0 39.5px 56px;
+    padding: 56px 75px 64px;
+  }
+
+  .contact h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .contact h2,
+  .contact p {
+    margin-bottom: 26px;
+  }
+
+  .contact p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
 }
