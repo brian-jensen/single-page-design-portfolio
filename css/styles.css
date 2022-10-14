@@ -53,7 +53,7 @@ body {
   padding-bottom: 32px;
 }
 
-main >:not(.slider) {
+main>:not(.slider) {
   padding: 0 16px;
 }
 
@@ -107,7 +107,7 @@ a {
 
 .hero-skills {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "design design"
     "ux apps"
     "illustrations illustrations"
@@ -210,25 +210,18 @@ a {
 .slider h2 {
   font-size: 24px;
   line-height: 30px;
+  margin-bottom: 32px;
   color: var(--color-black);
 }
 
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(5, max-content);
-  grid-template-rows: 1fr;
-  gap: 15px;
-  margin: 32px auto;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+.glide li {
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.gallery img {
-  display: block;
-  height: 180px;
-  background: #D8D8D8;
+.glide img {
+  max-width: 100%;
   border-radius: 10px;
-  object-fit: cover;
 }
 
 .controls {
@@ -236,9 +229,10 @@ a {
   justify-content: center;
   align-items: center;
   gap: 16px;
+  margin-top: 32px;
 }
 
-.controls button{
+.controls button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,6 +269,21 @@ footer {
   padding-bottom: 16px;
 }
 
+@media (hover: hover) {
+  header a:hover,
+  footer a:hover,
+  .controls button:hover {
+    background-color: var(--color-blue);
+    transition: background-color 0.3s ease;
+  }
+
+  .bio a:hover,
+  .contact a:hover {
+    background-color: var(--color-yellow);
+    transition: background-color 0.3s ease;
+  }
+}
+
 @media (min-width: 48em) {
 
   .wrapper {
@@ -286,7 +295,7 @@ footer {
     width: 64px;
     height: 64px;
   }
-  
+
   a {
     height: 56px;
     width: 228px;
@@ -294,7 +303,7 @@ footer {
   }
 
   header,
-  main >:not(.slider),
+  main>:not(.slider),
   footer {
     padding: 0 39.5px;
   }
@@ -317,7 +326,7 @@ footer {
   }
 
   .hero-skills {
-    grid-template-areas: 
+    grid-template-areas:
       "design design ux apps"
       "design design illustrations illustrations"
       "photography photography motion motion"
@@ -364,15 +373,11 @@ footer {
   .slider h2 {
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 56px;
   }
 
-  .gallery {
-    margin: 56px auto;
-    gap: 30px;
-  }
-
-  .gallery img {
-    height: 360px;
+  .controls {
+    margin-top: 56px;
   }
 
   main .contact {
@@ -404,7 +409,7 @@ footer {
   }
 
   header,
-  main >:not(.slider),
+  main>:not(.slider),
   footer {
     padding: unset;
     max-width: 1110px;
@@ -412,7 +417,7 @@ footer {
     margin-right: auto;
   }
 
-  main > .hero-text {
+  main>.hero-text {
     max-width: 772px;
     margin: 0 auto 80px;
   }
@@ -429,7 +434,7 @@ footer {
   }
 
   .hero-skills {
-    grid-template-areas: 
+    grid-template-areas:
       "design design ux apps photography photography"
       "design design illustrations illustrations motion motion"
     ;
@@ -463,10 +468,11 @@ footer {
   }
 
   .slider {
-    margin-bottom: 88px;
+    max-width: 1440px;
+    margin: 0 auto 88px;
   }
 
-  main > .contact {
+  main>.contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
